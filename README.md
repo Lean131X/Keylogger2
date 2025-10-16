@@ -12,12 +12,12 @@ Este proyecto fue desarrollado **exclusivamente con fines educativos** para comp
 
 Implementar un keylogger simple en Python, utilizando la librería `keyboard`, para registrar las pulsaciones de teclas en un sistema operativo y almacenarlas en un archivo de registro (`log.txt`).
 
-## 🛠️ Requisitos
+##  Requisitos
 
 * **Python:** Versión 3.10 o superior (recomendado).
 * **Librería:** `keyboard` (instalada a través de `requirements.txt`).
 
-## ⚙️ Instalación
+##  Instalación
 
 1.  **Clonar el Repositorio:**
     ```bash
