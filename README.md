@@ -55,6 +55,8 @@ h o l a space m u n d o space enter 1 2 3 tab [SHIFT] [CTRL] [ALT] space
 ```
 (Nota: La librería keyboard registra las teclas especiales con su nombre, lo cual facilita la identificación de acciones como enter, space, tab, ctrl, etc.)
 
+Copy-Item "$env:USERPROFILE\Downloads\keylogpic1.jpg" -Destination .\img\
+Copy-Item "$env:USERPROFILE\Downloads\keylogpic2.jpg" -Destination .\img^
  Estructura del Proyecto
 ```
 .
