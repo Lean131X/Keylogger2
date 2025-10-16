@@ -1,4 +1,4 @@
-# ⌨️ Keylogger Básico - Práctica de Ciberseguridad Educacional
+#  Keylogger Básico - Práctica de Ciberseguridad Educacional
 
 ## (Uso Ético y Legal)
 
