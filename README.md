@@ -1,33 +1,65 @@
-PROYECTO EDUCATIVO: RASTREADOR DE TECLADO (VERSIÓN SIMPLE)
+# ⌨️ Keylogger Básico - Práctica de Ciberseguridad Educacional
 
-Este proyecto es una implementación mínima de un rastreador de pulsaciones (keylogger) en Python, diseñado estrictamente con fines educativos y de seguridad informática para demostrar la funcionalidad básica.
+## (Uso Ético y Legal)
 
-DISCLAIMER IMPORTANTE: El uso de este código para monitorear o acceder a información de terceros sin su consentimiento es ilegal y no ético. La responsabilidad de su uso recae enteramente sobre el usuario.
+Este proyecto fue desarrollado **exclusivamente con fines educativos** para comprender la mecánica interna de un keylogger. Su objetivo es la investigación de seguridad y el desarrollo de contramedidas en entornos controlados y autorizados.
 
-⚙️ Dependencias
+**El uso de este código para actividades no éticas, ilegales o sin el consentimiento explícito y previo de los usuarios y/o propietarios del sistema está estrictamente prohibido y es responsabilidad exclusiva del usuario.**
 
-Este script requiere la librería de Python keyboard.
+---
 
-pip install keyboard
+## Objetivo de la Actividad
 
+Implementar un keylogger simple en Python, utilizando la librería `keyboard`, para registrar las pulsaciones de teclas en un sistema operativo y almacenarlas en un archivo de registro (`log.txt`).
 
-🚀 Ejecución
+## 🛠️ Requisitos
 
-Guarde el código seleccionado como keylogger_simple.py y ejecútelo desde su terminal:
+* **Python:** Versión 3.10 o superior (recomendado).
+* **Librería:** `keyboard` (instalada a través de `requirements.txt`).
 
-python keylogger_simple.py
+## ⚙️ Instalación
 
+1.  **Clonar el Repositorio:**
+    ```bash
+    git clone https://github.com/Lean131X/Keylogger2.git
+    cd [nombre-del-repositorio]
+    ```
 
-🛑 Detención del Script
+2.  **Instalar Dependencias:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Dado que el código utiliza un bucle while True para mantenerse activo, debe detenerlo manualmente. Presione la combinación:
+## Ejemplos de Ejecución
 
-$$\text{CTRL} + \text{C}$$
+### 1. Iniciar el Keylogger
 
-💾 Funcionamiento y Archivo de Registro
+Ejecuta el script principal desde tu terminal:
 
-Creación del Log: La línea open(log_file, 'w').close() asegura que el archivo log.txt se cree (o se vacíe si ya existe) en el mismo directorio donde se ejecuta el script.
+```bash
+python main.py
+```
+2. Detener la Grabación
+Para detener el keylogger y finalizar la sesión de registro, presiona
+```
+Ctrl + C en la terminal.
+```
+4. Revisar el Archivo de Registro (log.txt)
+El script guardará automáticamente todas las pulsaciones de teclas en el archivo log.txt.
 
-Registro de Teclas: El script utiliza una función lambda concisa con keyboard.hook para registrar el nombre de cada tecla presionada (event.name) directamente en el archivo log.txt.
+Contenido de log.txt (Ejemplo de pulsaciones):
 
-Ubicación: El archivo log.txt se encontrará en la misma carpeta desde donde ejecutó el comando python.
+Si el usuario escribió "Hola Mundo [Enter] 123 [Tab]", el archivo log.txt registrará:
+```
+h o l a space m u n d o space enter 1 2 3 tab [SHIFT] [CTRL] [ALT] space
+```
+(Nota: La librería keyboard registra las teclas especiales con su nombre, lo cual facilita la identificación de acciones como enter, space, tab, ctrl, etc.)
+
+ Estructura del Proyecto
+```
+.
+├── main.py             # Código principal del keylogger.
+├── requirements.txt    # Lista de dependencias (keyboard).
+├── README.md           # Este archivo de documentación.
+└── log.txt             # (Generado al ejecutar) Archivo de registro de logs.
+```
